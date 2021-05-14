@@ -1,0 +1,15 @@
+.jumbotron {
+  /* 2rem 1 rem = padding atas bawah 2 rem dan kiri kanan 1 rem */
+  padding-top: 5rem;
+  /* padding: 2rem 1rem; */
+  background-color: #e2edff;
+}
+
+/* kalau id pakai tanda # */
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
