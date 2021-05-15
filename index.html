@@ -190,6 +190,14 @@
         <!-- E.2 Bagian Form Pengisian Data -->
         <div class="row justify-content-center">
           <div class="col-md-6">
+            
+            <!-- bagian pesan jika sudah tekan tombol kirim -->
+            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>Terimakasih...</strong> Pesan Anda sudah kami terima..akan segera kami proses
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <!-- akhir bagian pesan -->
+
             <form name="AcikPetrus Contact Form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
@@ -202,7 +210,11 @@
                 <label for="pesan" class="form-label">Pesan</label>
                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-success btn-kirim">Submit</button>
+              <button class="btn btn-success btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -227,11 +239,32 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzu85hiNDy3Tn5vOCiovTcmnoDVXplkh8IEjrnQFkHBmlAQ3ibOATJr4_yPZqmhA-yVqg/exec'
       const form = document.forms['AcikPetrus Contact Form']
-    
+      
+      // kita tambahkan variabel/fungsi js kita utk membaca tombol2 yg kita mau baca apakah dipilih/tekan
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.alert');
+
       form.addEventListener('submit', e => {
-        e.preventDefault()
+        e.preventDefault();
+
+        // ketika tombol submit di klik, tampilkan tombol loading, hilangkan tombol kirim
+        // jika ada namaclass btnloading dan statusnya d-none maka akan dihilangkan d-none nya dan sebaliknya jika tidak ada maka akan di d-none kan
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+
+            // kita tambahkan disini jika sudah berhasil kirim datanya maka tombol kita balikin spt semua
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            myAlert.classList.toggle('d-none');
+            // kosongkan isian formnya
+            form.reset();
+            console.log('Success!', response)
+          })
           .catch(error => console.error('Error!', error.message))
       })
     </script>
