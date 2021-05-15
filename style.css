@@ -13,3 +13,12 @@
 section {
   padding-top: 5rem;
 }
+
+.gallery-img {
+  width: 100%;
+}
+
+/* membuat semua element yg ada di bagian row di gallery padding nya jadi 0*/
+#gallery .row * {
+  padding: 0;
+}

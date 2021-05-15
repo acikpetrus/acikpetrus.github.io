@@ -12,6 +12,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+    <!-- Library AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -57,7 +60,7 @@
       <section class="jumbotron text-center">
         <img src="img/foto.jpg" alt="AcikFamily" width="200" class="img-thumbnail rounded-circle">
         <h1 class="display-4">Acik Petrus</h1>
-        <p class="lead">Freelance Programmer | IT</p>
+        <p class="lead"></p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       </section>
       <!-- Akhir Jumbotron -->
@@ -65,7 +68,7 @@
 
       <!-- C. Bagian About -->
       <section id="about">
-        <div class="container">
+        <div class="container" data-aos="fade-in" data-aos-duration="4000">
           
           <!-- C.1 Baris Bagian Header Section (ABOUT ME) -->
           <div class="row text-center mb-3">
@@ -78,13 +81,13 @@
           <!-- C.2. Baris Bagian Isi Section About (ada 2 kolom) -->
           <div class="row justify-content-center fs-5">
             <!-- Kolom 1 -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
               <p>Sarjana Komputer (S1) dari Universitas Kristen Duta Wacana Yogyakarta. Lulus Tahun 1999 dan sekarang berumur 45 tahun. Kelahiran Natuna Kep. Riau</p>
             </div>
             <!-- Akhir Kolom 1 -->
             <!-- Kolom 2 -->
-            <div class="col-md-4">
-              <p>Pernah bekerja di Kantor Konsultan Pajak Budi Darmodjo Semarang, bagian IT kurang lebih 2 tahun, kemudian memutuskan untuk menjadi seorang pekerja lepas (freelance) programmer.
+            <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="350">
+              <p>Pernah bekerja di Kantor Konsultan Pajak Budi Darmodjo & Asc. Semarang, bagian IT, kurang lebih selama 2 tahun. Kemudian memutuskan untuk menjadi seorang pekerja lepas (freelance) programmer.
                  Proyek-proyek yang dikerjakan umumnya berhubungan dengan Sistem Informasi Akuntansi</p>
             </div>
             <!-- Akhir Kolom 2 -->
@@ -114,7 +117,7 @@
 
           <!-- Gambar Project1 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="2000">
               <img src="img/kb1.jpg" class="card-img-top" alt="SuryaAbadiPlasindo">
               <div class="card-body">
                 <p class="card-text">PT. Surya Abadi Plasindo - Surakarta</p>
@@ -125,7 +128,7 @@
           
           <!-- Gambar Project2 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="2000" delay="300">
               <img src="img/kb2.jpg" class="card-img-top" alt="SumberBaru">
               <div class="card-body">
                 <p class="card-text">CV. Sumber Baru - Surakarta</p>
@@ -136,7 +139,7 @@
           
           <!-- Gambar Project3 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="2000" delay="600">
               <img src="img/pc1.jpg" class="card-img-top" alt="SolusiDistribusi">
               <div class="card-body">
                 <p class="card-text">CV. Solusi Distribusi - Yogyakarta</p>
@@ -147,7 +150,7 @@
        
           <!-- Gambar Project4 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="2000" delay="900">
               <img src="img/pc2.jpg" class="card-img-top" alt="Mayar">
               <div class="card-body">
                 <p class="card-text">CV. Mayar - Yogyakarta</p>
@@ -158,7 +161,7 @@
        
           <!-- Gambar Project5 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="2000" delay="1200">
               <img src="img/pc3.jpg" class="card-img-top" alt="HeroHouseware">
               <div class="card-body">
                 <p class="card-text">CV. Hero Houseware - Purwokerto</p>
@@ -176,18 +179,100 @@
       <!-- Akhir Projects -->
 
 
-      <!-- E. Bagian Contact -->
+      <!-- E. Bagian Gallery -->
+      <section id="gallery">
+        <div class="container">
+
+          <!-- E.1 Bagian Header -->
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>Gallery</h2>
+            </div>
+          </div>
+
+          <!-- E.2 Bagian Isi -->
+          <div class="row justify-content-center">
+            
+            <!-- Gambar 1 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g1.jpg" alt="Gambar1" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g2.jpg" alt="Gambar2" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g3.jpg" alt="Gambar3" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g4.jpg" alt="Gambar4" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g5.jpg" alt="Gambar5" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g6.jpg" alt="Gambar6" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 7 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g7.jpg" alt="Gambar7" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 8 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g8.jpg" alt="Gambar8" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 9 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g9.jpg" alt="Gambar9" class="img-fluid gallery-img">
+              </a>
+            </div>
+            <!-- Gambar 10 -->
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/gallery/g10.jpg" alt="Gambar10" class="img-fluid gallery-img">
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- Akhir Gallery -->
+
+
+      <!-- F. Bagian Contact -->
       <section id="contact">
       <div class="container">
         
-        <!-- E.1 Bagian Header (CONTACT) -->
+        <!-- F.1 Bagian Header (CONTACT) -->
         <div class="row text-center mb-3">
           <div class="col">
             <h2>Contact Me</h2>
           </div>
         </div>
 
-        <!-- E.2 Bagian Form Pengisian Data -->
+        <!-- F.2 Bagian Form Pengisian Data -->
         <div class="row justify-content-center">
           <div class="col-md-6">
             
@@ -224,7 +309,7 @@
       <!-- Akhir Contact -->
 
 
-      <!-- F. Bagian Footer -->
+      <!-- G. Bagian Footer -->
       <footer class="bg-primary text-white text-center">
         <p>Copyright <i class="bi bi-heart-fill text-danger"></i>Acik-Petus 2021</p>
       </footer>
@@ -235,6 +320,42 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     
+    <!-- Scrip AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+      // kita buat animasi utk semua item/element di gallery, spy tidak 1-1
+      const galleryImage = document.querySelectorAll('.gallery-img')
+
+      galleryImage.forEach( (img,i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 300;
+        img.dataset.duration = 1000;
+      })
+
+      AOS.init();
+    </script>
+    
+    
+    <!-- Script GSAP (Animasi Platform) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- utk animasi text nya -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+
+    <!-- kita isi script kita utk menjalankan GSAP nya -->
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead',{ duration: 3, delay: 1, text: 'Freelance Programmer | IT'})
+      // kita membuat element img didalam class jumbotron dari posisi -100 (atas) turun ke posisi asli dengan durasi 1 detik
+      //  mulai dari tidak keliatan (opacity 0), gerakannya mantul2 (propoery EASE nilai nya "BOUNCE")
+      // gsap.from('.jumbotron img', { duration : 1, y: -100, opacity: 0, ease : 'bounce'})
+
+      gsap.from('.jumbotron img', { duration : 1, rotateY: 360, opacity: 0})
+      gsap.from('.navbar',{ duration : 1.5, y: '-100%', opacity: 0, ease: "bounce"}) 
+      gsap.from('.display-4',{ duration : 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'}) 
+    </script>
+
     <!-- Script From Jamie -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzu85hiNDy3Tn5vOCiovTcmnoDVXplkh8IEjrnQFkHBmlAQ3ibOATJr4_yPZqmhA-yVqg/exec'
